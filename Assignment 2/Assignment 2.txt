@@ -1,0 +1,45 @@
+python
+# assignment_2.py
+# This program counts the total number of letters and digits in a user-provided string.
+
+def main():
+    # 1. Accept dynamic input from the console
+    user_string = input("Enter a string: ")
+
+    # 2. Initialize counters for letters and digits
+    letters_count = 0
+    digits_count = 0
+
+    # 3. Iterate through each character in the input
+    for char in user_string:
+        # Check if the character is a letter (A-Z or a-z)
+        if char.isalpha():
+            letters_count += 1
+        # Check if the character is a digit (0-9)
+        elif char.isdigit():
+            digits_count += 1
+
+    # 4. Print the results matching the expected output format
+    print(f"LETTERS {letters_count}")
+    print(f"DIGITS {digits_count}")
+
+if __name__ == "__main__":
+    main()
+
+input:
+hello world! 123
+
+output:
+LETTER:10
+DIGITS:3
+
+How it Works:
+
+input(): This function allows the user to type their sentence directly into the console.
+
+.isalpha(): This is a built-in Python method that returns True if a character is a letter. It correctly ignores spaces and punctuation (like the "!" in yourexample).
+
+.isdigit(): This method returns True if the character is a number from 0 to 9.
+
+f-strings: The print(f"...") syntax is used to format the output exactly as required by your assignment instructions.
+
